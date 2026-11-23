@@ -6,6 +6,8 @@ const campos = document.querySelectorAll('.todas-senha input');
 const mensagem = document.getElementById('mensagem');
 
 let senha = Math.floor(Math.random() * 51);
+console.log("Senha do cofre:", senha);
+
 let aberto = false;
 campos.forEach((campo, index) => {
  campo.addEventListener('input', function() {
@@ -22,7 +24,7 @@ botao.addEventListener('click', function() {
         cofreFechado.style.display = 'block';
         cofreAberto.style.display = 'none';
         aberto = false;
-        mensagem.textContent = 'Cofre fechado!';
+        mensagem.textContent = 'Cofre fechado';
         campos.forEach(campo => campo.value = '');
         return;
     }
@@ -32,19 +34,15 @@ botao.addEventListener('click', function() {
         senhaDigitada += campo.value;
     });
     if (senhaDigitada === '') {
-        mensagem.textContent = 'Digite a senha!';
+        mensagem.textContent = 'Digite a senha';
         return;
     } if (Number(senhaDigitada) === senha && senhaDigitada.length <= 2) {
         cofreFechado.style.display = 'none';
         cofreAberto.style.display = 'block';
         aberto = true;
-        mensagem.textContent = 'Cofre aberto com sucesso!';
+        mensagem.textContent = 'Cofre abertoo';
     } else {
-        mensagem.textContent = 'Senha incorreta! Tente novamente.';
+        mensagem.textContent = 'Senha errada. Tente novamente.';
     }
 
 });
-
-//ver senha
-let senha = Math.floor(Math.random() * 51);
-console.log("Senha do cofre:", senha);
