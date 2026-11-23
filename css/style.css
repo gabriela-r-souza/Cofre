@@ -1,0 +1,76 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(19, 19, 19);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.imagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+}
+
+.imagens img {
+    width: 360px;
+    height: auto;
+}
+
+#cofre-fechado {
+    display: block;
+}
+
+#cofre-aberto {
+    display: none;
+}
+
+.senha{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.todas-senha {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.todas-senha input {
+    width: 60px;
+    height: 65px;
+    font-size: 28px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+.botao-principal {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+button {
+    padding: 14px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+}
+
+#mensagem {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 17px;
+}
